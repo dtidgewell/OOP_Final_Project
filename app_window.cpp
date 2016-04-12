@@ -5,7 +5,7 @@
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )
  {
-   _markx = 0;
+   _markx = -.5;
    _marky = -0.6;
    addMenuEntry ( "Option 0", evOption0 );
    addMenuEntry ( "Option 1", evOption1 );
@@ -54,8 +54,8 @@ void AppWindow::handle ( const Event& e )
      if ( e.type==SpecialKey ){
        float currentPosition = _marky;
     switch ( e.key )
-     {case GLUT_KEY_LEFT:  _markx-=incx; break;
-      case GLUT_KEY_RIGHT: _markx+=incx; break;
+     {//case GLUT_KEY_LEFT:  _markx-=incx; break;
+      //case GLUT_KEY_RIGHT: _markx+=incx; break;
       case GLUT_KEY_UP:
             while(_marky < currentPosition+JUMP_HEIGHT){
                 _marky+=incy;
