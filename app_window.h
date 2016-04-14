@@ -4,6 +4,9 @@
 #define APP_WINDOW_H
 
 # include "glut_window.h"
+# include "Obstacle.h"
+#include "Spike.h"
+#include <vector>
 
 // The functionality of your application should be implemented inside AppWindow
 class AppWindow : public GlutWindow
@@ -11,6 +14,7 @@ class AppWindow : public GlutWindow
     enum MenuEv { evOption0, evOption1 };
     float _markx, _marky;
     int _w, _h;
+     std::vector<Obstacle*> v;
 
    public :
     AppWindow ( const char* label, int x, int y, int w, int h );

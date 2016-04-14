@@ -9,6 +9,8 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
    _marky = -0.6;
    addMenuEntry ( "Option 0", evOption0 );
    addMenuEntry ( "Option 1", evOption1 );
+     
+     v.push_back(new Spike());
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -92,7 +94,7 @@ void AppWindow::draw ()
      
      glColor3d(1.0,0.0,0.0);
      
-     //Mario
+     //Player
      const double s=0.05;
      glBegin(GL_POLYGON);
      glVertex2d ( _markx-0.1, _marky+0.1 );
@@ -110,6 +112,10 @@ void AppWindow::draw ()
      glVertex2d ( 1.0, -1.0);
      glVertex2d ( -1.0, -1.0 );
      glEnd();
+     
+     for (int i = 0; i < v.size(); i++) {
+         (v[i])->draw();
+     }
 
    /* Set drawing color to yellow
    glColor3d ( 1.0, 0.9, 0.3 );		

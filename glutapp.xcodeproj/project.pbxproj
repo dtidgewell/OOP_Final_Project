@@ -35,6 +35,9 @@
 		173FEF101AA63AE0006CCB85 /* glut_window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glut_window.h; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		ED2557651CC00C7C0087B640 /* Obstacle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = ../Obstacle.h; sourceTree = "<group>"; };
+		ED2557661CC00CE00087B640 /* Vec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vec.h; path = ../Vec.h; sourceTree = "<group>"; };
+		ED2557671CC00DD50087B640 /* Spike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Spike.h; path = ../Spike.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,9 @@
 				173FEF0F1AA63AE0006CCB85 /* glut_window.cpp */,
 				173FEF101AA63AE0006CCB85 /* glut_window.h */,
 				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
+				ED2557661CC00CE00087B640 /* Vec.h */,
+				ED2557651CC00C7C0087B640 /* Obstacle.h */,
+				ED2557671CC00DD50087B640 /* Spike.h */,
 				173FEF021AA63A07006CCB85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				173FEF0A1AA63A07006CCB85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
