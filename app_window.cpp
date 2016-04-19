@@ -51,7 +51,7 @@ void AppWindow::handle ( const Event& e )
     }
 
    const float incx=0.02f;
-   const float incy=0.02f;
+   const float incy=0.03f;
      const float JUMP_HEIGHT = 0.6;
      if ( e.type==SpecialKey ){
        float currentPosition = _marky;
@@ -170,3 +170,6 @@ void AppWindow::draw ()
    glutSwapBuffers(); // we were drawing to the back buffer, now bring it to the front
 }
 
+void AppWindow::idle(){
+    draw();
+}
