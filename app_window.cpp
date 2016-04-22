@@ -2,6 +2,8 @@
 # include <iostream>
 # include "app_window.h"
 
+Rect full(-1.0, 1, 1, 1);
+
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )
  {
@@ -9,7 +11,7 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
    _marky = -0.6;
    addMenuEntry ( "Option 0", evOption0 );
    addMenuEntry ( "Option 1", evOption1 );
-     
+
      v.push_back(new Spike());
  }
 
@@ -24,6 +26,9 @@ void AppWindow::windowToScene ( float& x, float &y )
 // Called every time there is a window event
 void AppWindow::handle ( const Event& e )
  {
+	 Time checkerBefore;
+	 Time checkerAfter;
+	 float prev, curr;
    bool rd=true;
 
    if ( e.type==Keyboard ) 
@@ -50,8 +55,8 @@ void AppWindow::handle ( const Event& e )
       rd=false; // no need to redraw
     }
 
-   const float incx=0.02f;
-   const float incy=0.03f;
+   const float incx = 0.002;// *full.width;
+   const float incy = 0.003;// *full.height;
      const float JUMP_HEIGHT = 0.6;
      if ( e.type==SpecialKey ){
        float currentPosition = _marky;
@@ -59,9 +64,21 @@ void AppWindow::handle ( const Event& e )
      {//case GLUT_KEY_LEFT:  _markx-=incx; break;
       //case GLUT_KEY_RIGHT: _markx+=incx; break;
       case GLUT_KEY_UP:
+
+		 checkerBefore.get();
+		 prev = checkerBefore.getMS();
+
             while(_marky < currentPosition+JUMP_HEIGHT){
-                _marky+=incy;
-                draw();
+
+				checkerAfter.get();
+				curr = checkerAfter.getMS();
+				
+				std::cout << curr-prev << std::endl;
+				if (curr - prev>= .00) {
+					_marky += incy;
+					std::cout << _marky << std::endl;
+					draw();
+				}
             }
              while(_marky > currentPosition){
                  _marky-=incy;
@@ -93,6 +110,8 @@ void AppWindow::draw ()
    glLoadIdentity();
      
      glColor3d(1.0,0.0,0.0);
+
+
      
      //Player
      const double s=0.05;
@@ -116,55 +135,6 @@ void AppWindow::draw ()
      for (int i = 0; i < v.size(); i++) {
          (v[i])->draw();
      }
-
-   /* Set drawing color to yellow
-   glColor3d ( 1.0, 0.9, 0.3 );		
-
-   // Draw a cross
-   const double s=0.05;
-   glBegin ( GL_LINES );
-   glVertex2d ( _markx-s, _marky );
-   glVertex2d ( _markx+s, _marky );
-   glVertex2d ( _markx, _marky-s );
-   glVertex2d ( _markx, _marky+s );
-   glEnd();
-
-   // Draw some white points
-   glColor3d ( 1.0, 1.0, 1.0 );		
-   glBegin ( GL_POINTS );
-   glVertex2d ( 0.5, 0.5 );
-   glVertex2d (-0.5,-0.5 );
-   glVertex2d ( 0.5,-0.5 );
-   glVertex2d (-0.5, 0.5 );
-   glEnd();
-
-   // Draw three overlapping triangles
-   glBegin( GL_TRIANGLES ); // you may use GL_POLYGON for generic *convex* polygons
-   glColor3f ( 1.0, 0.0, 0.0 ); // red
-   glVertex2d (-0.7, -0.5 );
-   glVertex2d ( 0.1, 0.8 );
-   glVertex2d ( 0.3, 0.6 );
-
-   glColor3f ( 0.0, 1.0, 0.0 ); // green
-   glVertex3d ( -0.3, 0.7, 0.1 ); // the Z coordinate allows to control what is on top of what
-   glVertex3d ( 0.6,-0.5, -0.1 );
-   glVertex3d ( 0.7,-0.3, -0.1 );
-
-   glColor3f ( 0.0, 0.0, 1.0 ); // blue
-   glVertex3d ( 0.85, -0.25, 0.0 );
-   glVertex3d ( -0.8, -0.4, -0.1 );
-   glVertex3d ( -0.8, -0.1, -0.1 );
-   glEnd(); */
-
-   /* you may use GL_POLYGON for generic *convex* polygons, like this:
-   glBegin( GL_POLYGON );
-   glColor3f ( ... );
-   glVertex2d ( ... );
-   glVertex2d ( ... );
-   glVertex2d ( ... );
-   glVertex2d ( ... );
-   glEnd();*/
-
    // Swap buffers
    glFlush();         // flush the pipeline (usually not necessary)
    glutSwapBuffers(); // we were drawing to the back buffer, now bring it to the front
