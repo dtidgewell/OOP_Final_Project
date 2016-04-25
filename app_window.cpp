@@ -76,7 +76,7 @@ void AppWindow::handle ( const Event& e )
 				std::cout << curr-prev << std::endl;
 				if (curr - prev>= .00) {
 					_marky += incy;
-					std::cout << _marky << std::endl;
+					//std::cout << _marky << std::endl;
 					draw();
 				}
             }
