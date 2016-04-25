@@ -56,7 +56,7 @@ void AppWindow::handle ( const Event& e )
     }
 
    const float incx = 0.002;// *full.width;
-   const float incy = 0.003;// *full.height;
+   const float incy = 0.03;// *full.height;
      const float JUMP_HEIGHT = 0.6;
      if ( e.type==SpecialKey ){
        float currentPosition = _marky;
@@ -65,24 +65,35 @@ void AppWindow::handle ( const Event& e )
       //case GLUT_KEY_RIGHT: _markx+=incx; break;
       case GLUT_KEY_UP:
 
-		 checkerBefore.get();
-		 prev = checkerBefore.getMS();
+
+		 prev = GetTickCount();
 
             while(_marky < currentPosition+JUMP_HEIGHT){
 
-				checkerAfter.get();
-				curr = checkerAfter.getMS();
+				curr = GetTickCount();
+
+			//	std::cout << "curr: " << curr << " prev: " << prev <<"\n";
 				
-				std::cout << curr-prev << std::endl;
-				if (curr - prev>= .00) {
+				if (curr - prev>= .001) {
 					_marky += incy;
 					//std::cout << _marky << std::endl;
 					draw();
 				}
+
+				prev = GetTickCount();
+		
             }
+			prev = GetTickCount();
              while(_marky > currentPosition){
-                 _marky-=incy;
-                 draw();
+
+				 curr = GetTickCount();
+
+				 if (curr - prev >= .01) {
+					 _marky -= incy;
+					 //std::cout << _marky << std::endl;
+					 draw();
+				 }
+				 prev = GetTickCount();
              }
             break;
       //case GLUT_KEY_DOWN:  _marky-=incy; break;

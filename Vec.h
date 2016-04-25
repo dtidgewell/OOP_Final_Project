@@ -84,7 +84,7 @@ public:
 		m = tm->tm_min;
 		s = tm->tm_sec;
 		t = clock() - t;
-		ms = t / CLOCKS_PER_SEC * 1000;
+		ms = t / CLOCKS_PER_SEC;
 
 	}
 	float getMS() {
