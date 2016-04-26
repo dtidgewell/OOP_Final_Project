@@ -4,8 +4,8 @@ class Ledge : public Obstacle{
 		float left, right, top, bottom;
 		Ledge()
 		{
-			left = 1.0;
-			right = 1.5;
+			left = 2.0;
+			right = 2.7;
 			top = -0.4;
 			bottom = -0.7;
 
