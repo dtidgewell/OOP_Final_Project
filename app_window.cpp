@@ -13,6 +13,7 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
    addMenuEntry ( "Option 1", evOption1 );
 
      v.push_back(new Spike());
+	 v.push_back(new Ledge());
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],

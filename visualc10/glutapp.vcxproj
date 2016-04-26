@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="..\app_window.h" />
     <ClInclude Include="..\glut_window.h" />
+    <ClInclude Include="..\Ledge.h" />
     <ClInclude Include="..\Obstacle.h" />
     <ClInclude Include="..\Spike.h" />
     <ClInclude Include="..\Vec.h" />
