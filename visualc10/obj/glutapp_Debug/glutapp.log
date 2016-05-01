@@ -1,27 +1,19 @@
 ﻿  app_window.cpp
-c:\users\lyphc\documents\github\oop_final_project\vec.h(67): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\lyphc\documents\github\oop_final_project\vec.h(65): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
+c:\users\lyphc\documents\github\oop_final_project\vec.h(81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\lyphc\documents\github\oop_final_project\vec.h(82): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 c:\users\lyphc\documents\github\oop_final_project\vec.h(83): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(84): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(85): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(87): warning C4244: '=': conversion from 'time_t' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(82): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\lyphc\documents\github\oop_final_project\vec.h(85): warning C4244: '=': conversion from 'time_t' to 'float', possible loss of data
+c:\users\lyphc\documents\github\oop_final_project\vec.h(80): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(7): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(9): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(10): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(14): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(11): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(58): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(59): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(60): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(69): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(73): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(83): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(86): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(89): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(96): warning C4244: '=': conversion from 'DWORD' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(30): warning C4101: 'checkerAfter': unreferenced local variable
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(29): warning C4101: 'checkerBefore': unreferenced local variable
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(146): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(15): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(64): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(65): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(66): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(158): warning C4018: '<': signed/unsigned mismatch
   glutapp.vcxproj -> C:\Users\lyphc\Documents\GitHub\OOP_Final_Project\visualc10\obj\glutapp_Debug\glutapp.exe

@@ -1,6 +1,10 @@
 
 # include <iostream>
 # include "app_window.h"
+#include <chrono>
+#include <string.h>
+
+typedef std::chrono::high_resolution_clock Clock;
 
 Rect full(-1.0, 1, 1, 1);
 
@@ -26,10 +30,12 @@ void AppWindow::windowToScene ( float& x, float &y )
 // Called every time there is a window event
 void AppWindow::handle ( const Event& e )
  {
-	 Time checkerBefore;
-	 Time checkerAfter;
-	 float prev, curr;
+	 auto prev = Clock::now();
+	 auto curr = Clock::now();
+	 auto elapsed = (curr - prev);
+
    bool rd=true;
+
 
    if ( e.type==Keyboard ) 
     switch ( e.key )
@@ -66,34 +72,40 @@ void AppWindow::handle ( const Event& e )
       case GLUT_KEY_UP:
 
 
-		 prev = GetTickCount();
+		  prev = Clock::now();
 
             while(_marky < currentPosition+JUMP_HEIGHT){
 
-				curr = GetTickCount();
+				curr = Clock::now();
 
-			//	std::cout << "curr: " << curr << " prev: " << prev <<"\n";
-				
-				if (curr - prev>= .001) {
+			//std::cout << "curr: " << curr << " prev: " << prev <<"\n";
+
+				elapsed = (curr - prev);
+
+				//std::cout << elapsed.count() << std::endl;
+				if (elapsed.count() >= 10000000) {
 					_marky += incy;
 					//std::cout << _marky << std::endl;
 					draw();
-				}
 
-				prev = GetTickCount();
+					prev = Clock::now();
+				}
 		
             }
-			prev = GetTickCount();
+	
+
+			prev = Clock::now();
              while(_marky > currentPosition){
 
-				 curr = GetTickCount();
-
-				 if (curr - prev >= .01) {
+				curr = Clock::now();
+				elapsed = (curr - prev);
+				//std::cout << elapsed.count() << std::endl;
+				 if (elapsed.count() >= 10000000) {
 					 _marky -= incy;
-					 //std::cout << _marky << std::endl;
-					 draw();
+					// std::cout << _marky << std::endl;
+					draw();
+					 prev = Clock::now();
 				 }
-				 prev = GetTickCount();
              }
             break;
       //case GLUT_KEY_DOWN:  _marky-=incy; break;
