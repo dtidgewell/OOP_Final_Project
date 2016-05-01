@@ -11,7 +11,7 @@ class Spike: public Obstacle{
         red = 0.0;
         green = 0.0;
         blue = 1.0;
-        dx = -0.01;
+        dx = -0.001;
     }
     
     Spike(float l, float r, float t,float m, float b, float rd, float g, float bl, float d){

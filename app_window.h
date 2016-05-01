@@ -6,6 +6,7 @@
 # include "glut_window.h"
 # include "Obstacle.h"
 #include "Spike.h"
+#include "Ledge.h"
 #include <vector>
 
 // The functionality of your application should be implemented inside AppWindow
