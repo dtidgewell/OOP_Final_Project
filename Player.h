@@ -13,7 +13,7 @@ public:
         green = 0.0;
         blue = 0.0;
         dx = 0.0;
-        dy = 0.0
+        dy = 0.0;
     }
     
     Player(float l, float r, float t, float b, float rd, float gn, float bl, float d)
@@ -40,7 +40,7 @@ public:
         //top += dx;
         //bottom += dx;
         
-        glColor3f(0.0, 1.0, 0.0);
+        glColor3f(1.0, 0.0, 0.0);
         
         glBegin(GL_POLYGON);
         glVertex2d(left, bottom);

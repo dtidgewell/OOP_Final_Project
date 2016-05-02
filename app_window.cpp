@@ -160,7 +160,7 @@ void AppWindow::draw ()
      
      for (int i = 0; i < v.size(); i++) {
          (v[i])->draw();
-         if(typeid(v[i]).name() == "Spike"){((Spike)*v[i])->edges.clear();}
+         //if(typeid(v[i]).name() == "Spike"){((Spike)*v[i])->edges.clear();}
      }
    // Swap buffers
    glFlush();         // flush the pipeline (usually not necessary)
