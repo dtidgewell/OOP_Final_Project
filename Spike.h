@@ -20,6 +20,7 @@ class Spike: public Object{
         top = t;
         middle = m;
         bottom = b;
+
         red = rd;
         green = g;
         blue = bl;

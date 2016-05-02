@@ -18,7 +18,10 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
 
      v.push_back(new Spike());
 	 v.push_back(new Ledge());
-     v.push_back(new Player());
+	 v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.001));
+	 v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.001));
+	 v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.001));
+	 v.push_back(new Player());
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],

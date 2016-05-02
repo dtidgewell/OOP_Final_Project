@@ -5,8 +5,8 @@ class Ledge : public Object{
 		Ledge()
 		{
 			left = 2.0;
-			right = 2.7;
-			top = -0.4;
+			right = 2.3;
+			top = -0.5;
 			bottom = -0.7;
 
 			red = 0.0;
@@ -21,6 +21,7 @@ class Ledge : public Object{
 			right = r;
 			top = t;
 			bottom = b;
+
 			red = rd;
 			green = gn;
 			blue = bl;
