@@ -18,6 +18,7 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
 
      v.push_back(new Spike());
 	 v.push_back(new Ledge());
+     v.push_back(new Player());
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -62,7 +63,8 @@ void AppWindow::handle ( const Event& e )
       rd=false; // no need to redraw
     }
 
-   const float incx = 0.002;// *full.width;
+   //const float incx = 0.002;// *full.width;
+   const float incx = 0.02;// *full.width;
    const float incy = 0.03;// *full.height;
      const float JUMP_HEIGHT = 0.6;
      if ( e.type==SpecialKey ){
@@ -137,14 +139,14 @@ void AppWindow::draw ()
 
 
      
-     //Player
+     /*//Player
      const double s=0.05;
      glBegin(GL_POLYGON);
      glVertex2d ( _markx-0.1, _marky+0.1 );
      glVertex2d ( _markx+0.1, _marky+0.1 );
      glVertex2d ( _markx+0.1, _marky-0.1 );
      glVertex2d ( _markx-0.1, _marky-0.1 );
-     glEnd();
+     glEnd();*/
      
      glColor3d(0.0, 1.0, 0.0);
      
@@ -158,6 +160,7 @@ void AppWindow::draw ()
      
      for (int i = 0; i < v.size(); i++) {
          (v[i])->draw();
+         if(typeid(v[i]).name() == "Spike"){((Spike)*v[i])->edges.clear();}
      }
    // Swap buffers
    glFlush();         // flush the pipeline (usually not necessary)

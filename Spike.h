@@ -1,4 +1,4 @@
-class Spike: public Obstacle{
+class Spike: public Object{
     public:
     float left, right, top, bottom, middle;
     

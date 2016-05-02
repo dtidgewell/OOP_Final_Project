@@ -35,9 +35,11 @@
 		173FEF101AA63AE0006CCB85 /* glut_window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glut_window.h; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		ED2557651CC00C7C0087B640 /* Obstacle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Obstacle.h; path = ../Obstacle.h; sourceTree = "<group>"; };
-		ED2557661CC00CE00087B640 /* Vec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vec.h; path = ../Vec.h; sourceTree = "<group>"; };
-		ED2557671CC00DD50087B640 /* Spike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Spike.h; path = ../Spike.h; sourceTree = "<group>"; };
+		ED2B771D1CCEDCF300E14912 /* Vec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vec.h; sourceTree = "<group>"; };
+		EDB6D22C1CD69F3300C87421 /* Ledge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ledge.h; sourceTree = "<group>"; };
+		EDB6D22D1CD7CE2B00C87421 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EDB6D22E1CD7CF2600C87421 /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		EDB6D22F1CD7D27F00C87421 /* Spike.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spike.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +65,11 @@
 				173FEF0F1AA63AE0006CCB85 /* glut_window.cpp */,
 				173FEF101AA63AE0006CCB85 /* glut_window.h */,
 				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
-				ED2557661CC00CE00087B640 /* Vec.h */,
-				ED2557651CC00C7C0087B640 /* Obstacle.h */,
-				ED2557671CC00DD50087B640 /* Spike.h */,
+				ED2B771D1CCEDCF300E14912 /* Vec.h */,
+				EDB6D22C1CD69F3300C87421 /* Ledge.h */,
+				EDB6D22F1CD7D27F00C87421 /* Spike.h */,
+				EDB6D22D1CD7CE2B00C87421 /* Player.h */,
+				EDB6D22E1CD7CF2600C87421 /* Object.h */,
 				173FEF021AA63A07006CCB85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,7 +108,7 @@
 		173FEEF91AA63A07006CCB85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Angelo Kyrilov";
 				TargetAttributes = {
 					173FEF001AA63A07006CCB85 = {
@@ -162,6 +166,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

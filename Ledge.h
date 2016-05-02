@@ -1,5 +1,5 @@
 
-class Ledge : public Obstacle{
+class Ledge : public Object{
 	public:
 		float left, right, top, bottom;
 		Ledge()

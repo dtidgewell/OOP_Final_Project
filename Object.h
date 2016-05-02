@@ -1,9 +1,9 @@
 #include "Vec.h"
 
-class Obstacle{
+class Object{
 	public:
 	
-    float red, green, blue, dx;
+    float red, green, blue, dx,dy;
     
     virtual bool contains(Vec& v) = 0;
     
