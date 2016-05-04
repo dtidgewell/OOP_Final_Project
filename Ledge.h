@@ -12,7 +12,7 @@ class Ledge : public Object{
 			red = 0.0;
 			green = 1.0;
 			blue = 0.0;
-			dx = -0.001;
+			dx = -0.01;
 		}
 
 		Ledge(float l, float r, float t, float b, float rd, float gn, float bl, float d)

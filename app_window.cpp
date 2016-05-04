@@ -7,6 +7,7 @@
 typedef std::chrono::high_resolution_clock Clock;
 
 Rect full(-1.0, 1, 1, 1);
+Player* p = new Player();
 
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )
@@ -18,10 +19,11 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
 
      v.push_back(new Spike());
 	 v.push_back(new Ledge());
-	 v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.001));
-	 v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.001));
-	 v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.001));
-	 v.push_back(new Player());
+	 v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
+	 v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
+	 v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.01));
+     //Player* p = new Player();
+	 v.push_back(p);
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -71,7 +73,7 @@ void AppWindow::handle ( const Event& e )
    const float incy = 0.03;// *full.height;
      const float JUMP_HEIGHT = 0.6;
      if ( e.type==SpecialKey ){
-       float currentPosition = _marky;
+       float currentPosition = p->top;
     switch ( e.key )
      {//case GLUT_KEY_LEFT:  _markx-=incx; break;
       //case GLUT_KEY_RIGHT: _markx+=incx; break;
@@ -80,7 +82,7 @@ void AppWindow::handle ( const Event& e )
 
 		  prev = Clock::now();
 
-            while(_marky < currentPosition+JUMP_HEIGHT){
+            while(p->top < currentPosition+JUMP_HEIGHT){
 
 				curr = Clock::now();
 
@@ -90,7 +92,8 @@ void AppWindow::handle ( const Event& e )
 
 				//std::cout << elapsed.count() << std::endl;
 				if (elapsed.count() >= 10000000) {
-					_marky += incy;
+					p->top += incy;
+                    p->bottom += incy;
 					//std::cout << _marky << std::endl;
 					draw();
 
@@ -101,13 +104,14 @@ void AppWindow::handle ( const Event& e )
 	
 
 			prev = Clock::now();
-             while(_marky > currentPosition){
+             while(p->top > currentPosition){
 
 				curr = Clock::now();
 				elapsed = (curr - prev);
 				//std::cout << elapsed.count() << std::endl;
 				 if (elapsed.count() >= 10000000) {
-					 _marky -= incy;
+					 p->top -= incy;
+                     p->bottom -= incy;
 					// std::cout << _marky << std::endl;
 					draw();
 					 prev = Clock::now();
