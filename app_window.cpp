@@ -196,6 +196,6 @@ void AppWindow::Reset() {
 	v.push_back(new Ledge());
 	v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
 	v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
-	v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(6.7, 6.9, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(p);
 }
