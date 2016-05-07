@@ -26,7 +26,8 @@ class AppWindow : public GlutWindow
     virtual void handle ( const Event& e );
     virtual void draw ();
     virtual void resize ( int w, int h );
-     virtual void idle();
+    virtual void idle();
+	virtual void Reset();
  };
 
 #endif // APP_WINDOW_H

@@ -1,27 +1,2 @@
-﻿  app_window.cpp
-c:\users\lyphc\documents\github\oop_final_project\vec.h(65): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
-c:\users\lyphc\documents\github\oop_final_project\vec.h(81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(82): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(83): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(85): warning C4244: '=': conversion from 'time_t' to 'float', possible loss of data
-c:\users\lyphc\documents\github\oop_final_project\vec.h(80): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: see declaration of 'localtime'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(7): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(9): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(14): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(8): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(15): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(8): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(16): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(22): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(23): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(24): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(72): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(73): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(74): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(168): warning C4018: '<': signed/unsigned mismatch
+﻿app_main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   glutapp.vcxproj -> C:\Users\lyphc\Documents\GitHub\OOP_Final_Project\visualc10\obj\glutapp_Debug\glutapp.exe

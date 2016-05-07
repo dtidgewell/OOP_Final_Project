@@ -4,6 +4,7 @@
 #include <chrono>
 #include <string.h>
 
+
 typedef std::chrono::high_resolution_clock Clock;
 
 Rect full(-1.0, 1, 1, 1);
@@ -17,13 +18,7 @@ AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
    addMenuEntry ( "Option 0", evOption0 );
    addMenuEntry ( "Option 1", evOption1 );
 
-     v.push_back(new Spike());
-	 v.push_back(new Ledge());
-	 v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
-	 v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
-	 v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.01));
-     //Player* p = new Player();
-	 v.push_back(p);
+   Reset();
  }
 
 // mouse events are in window coordinates, but your scene is in [0,1]x[0,1],
@@ -48,9 +43,7 @@ void AppWindow::handle ( const Event& e )
     switch ( e.key )
     { case ' ': // space bar
 	   std::cout << "Space pressed.\n";
-       _markx = 1.5;
-       _marky = 1.5;
-       redraw();
+	   Reset();
 	   break;
 
 	  case 27: // Esc was pressed
@@ -190,4 +183,19 @@ void AppWindow::idle(){
 		}
 
 	}
+}
+
+void AppWindow::Reset() {
+	if (v.size() > 0) {
+		for (int i = 0; i < v.size();i++) {
+			v.pop_back();
+		}
+	}
+
+	v.push_back(new Spike());
+	v.push_back(new Ledge());
+	v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
+	v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(6.2, 6.4, -0.5, 6.3, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(p);
 }

@@ -59,6 +59,7 @@ class GlutWindow
     virtual void handle ( const Event& e ) {}
     virtual void resize ( int w, int h ) {}
     virtual void idle () {}
+	virtual void gameOver() {}
  };
 
 #endif // GLUT_WINDOW_H
