@@ -175,5 +175,19 @@ void AppWindow::draw ()
 }
 
 void AppWindow::idle(){
-    draw();
+	auto prev = Clock::now();
+	auto curr = Clock::now();
+	auto elapsed = (curr - prev);
+
+	while (true) {
+		if (elapsed.count() >= 10000000) {
+			draw();
+			break;
+		}
+		else {
+			curr = Clock::now();
+			elapsed = (curr - prev);
+		}
+
+	}
 }
