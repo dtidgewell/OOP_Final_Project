@@ -1,12 +1,10 @@
-#include <vector>
+#include "Player.h"
 
 class Spike: public Object{
     public:
     float left, right, top, bottom, middle;
-
-	Vec blEdge;
-	Vec brEdge;
-	Vec tmEdge;
+	//std::vector<Vec> edges; //bottom Left,  Bottom Right,  Top Middle
+	
 
     Spike(){
         left = 1.0;
@@ -15,9 +13,9 @@ class Spike: public Object{
         middle = 1.1;
         bottom = -0.7;
 
-		Vec blEdge(left, bottom);
-		Vec brEdge(right, bottom);
-		Vec tmEdge(top, middle);
+		edges[0] = (Vec (left, bottom));
+		edges[1] = (Vec (right, bottom));
+		edges[2] = (Vec (top, middle));
 
         red = 0.0;
         green = 0.0;
@@ -32,9 +30,9 @@ class Spike: public Object{
         middle = m;
         bottom = b;
 
-		Vec blEdge(l, b);
-		Vec brEdge(r, b);
-		Vec tmEdge(t, m);
+		edges[0] = (Vec (left, bottom));
+		edges[1] = (Vec (right, bottom));
+		edges[2] = (Vec (top, middle));
 
         red = rd;
         green = g;
@@ -42,8 +40,14 @@ class Spike: public Object{
         dx = d;
     }
     
-    bool contains(Vec& v){
-        return false;
+    bool contains(Player& p){
+		for (int i = 0; i < edges.size(); i++) {
+			for (int j = 0; j < p.edges.size(); j++) {
+				float distance = sqrt(pow((edges[i].x - p.edges[j].x),2) - pow((edges[i].y - p.edges[j].y),2));
+				if (distance < .2) { return true; }
+			}
+		}
+		return false;
     }
     
     

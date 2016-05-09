@@ -1,6 +1,3 @@
-#include <ctime> 
-
-
 class Vec{
     
 public:
@@ -24,7 +21,7 @@ public:
     void print(){
         std::cout << "(" << x << ", " << y << ")";
     }
-    
+
 };
 
 class Rect
@@ -57,35 +54,4 @@ Rect(float UX, float UY, float X, float Y) {
 
 }
 
-int h, m, s;
-
-public:
-	void get() {
-		time_t t = time(NULL);
-		tm* tm = localtime(&t); // returns pointer to a static object
-		h = tm->tm_hour;
-		m = tm->tm_min;
-		s = tm->tm_sec;
-	}
-
-};
-
-class Time {
-	float h, m, s, ms;
-
-
-public:
-	void get() {
-		time_t t = time(NULL);
-		tm* tm = localtime(&t); // returns pointer to a static object
-		h = tm->tm_hour;
-		m = tm->tm_min;
-		s = tm->tm_sec;
-		t = clock() - t;
-		ms = t / CLOCKS_PER_SEC;
-
-	}
-	float getMS() {
-		return this->ms;
-	}
 };

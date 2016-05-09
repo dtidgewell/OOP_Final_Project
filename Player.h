@@ -2,12 +2,19 @@ class Player: public Object{
 public:
     
     float left, right, top, bottom;
+	//bottom Left, left top,  right top,  right bottom
+
     Player()
     {
         left = -0.5;
         right = -0.7;
         top = -0.5;
         bottom = -0.7;
+
+		edges[0] = Vec (left, bottom);
+		edges[1] = Vec (left, top);
+		edges[2] = Vec (right, top);
+		edges[3] = Vec (right, bottom);
         
         red = 1.0;
         green = 0.0;
@@ -26,9 +33,15 @@ public:
         green = gn;
         blue = bl;
         dx = d;
+
+		edges[0] = Vec(left, bottom);
+		edges[1] = Vec(left, top);
+		edges[2] = Vec(right, top);
+		edges[3] = Vec(right, bottom);
+
     }
     
-    bool contains(Vec& v)
+    bool contains(Player& p)
     {
         return false;
     }

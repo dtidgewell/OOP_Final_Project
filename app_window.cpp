@@ -3,6 +3,7 @@
 # include "app_window.h"
 #include <chrono>
 #include <string.h>
+#include "Player.h"
 
 
 typedef std::chrono::high_resolution_clock Clock;
