@@ -1,6 +1,9 @@
+#include <vector>
+
 class Spike: public Object{
     public:
     float left, right, top, bottom, middle;
+    std::vector<Vec*> edges;
     
     Spike(){
         left = 1.0;
@@ -42,5 +45,16 @@ class Spike: public Object{
             glVertex2d ( right, bottom );
             glVertex2d ( middle, top );
         glEnd();
+        float y = bottom;
+        for(float x = left; x < middle; x += .01){
+            y += .02;
+            Vec* v1 = new Vec(x,y);
+            edges.push_back(v1);
+        }
+        for(float x = middle; x < right; x += .01){
+            y -= .02;
+            Vec* v1 = new Vec(x,y);
+            edges.push_back(v1);
+        }
     }
 };
