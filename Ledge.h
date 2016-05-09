@@ -28,10 +28,14 @@ class Ledge : public Object{
 			dx = d;
 		}
 
-		bool contains(Vec& v)
-		{
-			return false;
+		bool contains(Vec& v){
+            if(left < v.x && top > v.y){return true;}
+            return false;
 		}
+        bool land(Vec& v){
+            if(left < v.x && right > v.x && top > v.y){return true;}
+            return false;
+        }
 
 		void draw()
 		{
