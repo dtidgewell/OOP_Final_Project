@@ -137,16 +137,7 @@ void AppWindow::draw ()
      
      glColor3d(1.0,0.0,0.0);
 
-
-     
-     /*//Player
-     const double s=0.05;
-     glBegin(GL_POLYGON);
-     glVertex2d ( _markx-0.1, _marky+0.1 );
-     glVertex2d ( _markx+0.1, _marky+0.1 );
-     glVertex2d ( _markx+0.1, _marky-0.1 );
-     glVertex2d ( _markx-0.1, _marky-0.1 );
-     glEnd();*/
+	
      
      glColor3d(0.0, 1.0, 0.0);
      

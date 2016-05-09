@@ -14,6 +14,8 @@
 #include <algorithm> 
 #include <cassert>
 
+#include "app_window.h"
+
 //#include "stdafx.h" //for Visual Studios 
 
 using namespace std;
