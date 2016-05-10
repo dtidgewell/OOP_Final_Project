@@ -12,15 +12,16 @@ class Spike: public Object{
 
     Spike(){
         left = 1.0;
-        right = 1.2;
+        right = 1.15;
         top = -0.5;
         middle = 1.1;
         bottom = -0.7;
 
-        for(int i = 0; i < 3; i++){edges.push_back(new Vec(0,0));}
-		edges[0] = (new Vec (left, bottom));
-		edges[1] = (new Vec (right, bottom));
-		edges[2] = (new Vec (top, middle));
+        for(int i = 0; i < 4; i++){edges.push_back(new Vec(0,0));}
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec(left, top);
+		edges[2] = new Vec(right, top);
+		edges[3] = new Vec(right, bottom);
 
         red = 0.0;
         green = 0.0;
@@ -35,10 +36,11 @@ class Spike: public Object{
         middle = m;
         bottom = b;
 
-        for(int i = 0; i < 3; i++){edges.push_back(new Vec(0,0));}
-		edges[0] = (new Vec (left, bottom));
-		edges[1] = (new Vec (right, bottom));
-		edges[2] = (new Vec (top, middle));
+        for(int i = 0; i < 4; i++){edges.push_back(new Vec(0,0));}
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec(left, top);
+		edges[2] = new Vec(right, top);
+		edges[3] = new Vec(right, bottom);
 
         red = rd;
         green = g;
@@ -48,12 +50,22 @@ class Spike: public Object{
     
     int contains(Object& p){
 
-		for (int i = 0; i < edges.size(); i++) {
+
+			if(right > p.edges[0]->x && left < p.edges[0]->x && bottom < p.edges[0]->y && top > p.edges[0]->y
+			|| right > p.edges[1]->x && left < p.edges[1]->x && bottom < p.edges[1]->y && top > p.edges[1]->y
+			|| right > p.edges[2]->x && left < p.edges[2]->x && bottom < p.edges[2]->y && top > p.edges[2]->y
+			|| right > p.edges[3]->x && left < p.edges[3]->x && bottom < p.edges[3]->y && top > p.edges[3]->y)
+		{
+			return 1;
+		}
+		
+
+		/*for (int i = 0; i < edges.size(); i++) {
 			for (int j = 0; j < p.edges.size(); j++) {
 				float distance = sqrt((pow((edges[i]->x - p.edges[j]->x),2) + pow((edges[i]->y - p.edges[j]->y),2)));
 				if (distance < .15) { return 1; }
 			}
-		}
+		}*/
 		return 0;
     }
 
@@ -69,18 +81,20 @@ class Spike: public Object{
     
 	void draw() {
 
-		edges[0] = (new Vec(left, bottom));
-		edges[1] = (new Vec(right, bottom));
-		edges[2] = (new Vec(top, middle));
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec(left, top);
+		edges[2] = new Vec(right, top);
+		edges[3] = new Vec(right, bottom);
 
 		left += dx;
 		middle += dx;
 		right += dx;
-		glColor3f(0.0, 0.0, 1.0);
-		glBegin(GL_TRIANGLES);
+		glColor3f(this->red, this->green, this->blue);
+		glBegin(GL_POLYGON);
 		glVertex2d(left, bottom);
+		glVertex2d(left, top);
+		glVertex2d(right, top);
 		glVertex2d(right, bottom);
-		glVertex2d(middle, top);
 		glEnd();
 		float y = bottom;
 	}

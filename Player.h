@@ -16,8 +16,8 @@ public:
     Player()
     {
 		
-        left = -0.5; //right
-        right = -0.7;//left
+        right = -0.5; //right
+        left = -0.7;//left
 
         top = -0.5;
         bottom = -0.7;
@@ -58,8 +58,7 @@ public:
     
 	int contains(Object& p)
     {
-        std::cout << "ERROR:Calling contains() from Player" << std::endl;
-        return 0;
+        return 2;
     }
     
     void draw()

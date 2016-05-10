@@ -68,7 +68,7 @@ void AppWindow::handle ( const Event& e )
    //const float incx = 0.002;// *full.width;
    const float incx = 0.02;// *full.width;
    const float incy = 0.03;// *full.height;
-     const float JUMP_HEIGHT = 0.8;
+     const float JUMP_HEIGHT = 0.85;
      if ( e.type==SpecialKey ){
        float currentPosition = p->top;
     switch ( e.key )
@@ -88,7 +88,7 @@ void AppWindow::handle ( const Event& e )
 				elapsed = (curr - prev);
 
 				//std::cout << elapsed.count() << std::endl;
-				if (elapsed.count() >= 10000000) {
+				if (elapsed.count() >= 10000000*3/4) {
 					p->top += incy;
                     p->bottom += incy;
 					//std::cout << _marky << std::endl;
@@ -106,7 +106,7 @@ void AppWindow::handle ( const Event& e )
 				curr = Clock::now();
 				elapsed = (curr - prev);
 				//std::cout << elapsed.count() << std::endl;
-				 if (elapsed.count() >= 10000000) {
+				 if (elapsed.count() >= 10000000 * 3 / 4) {
 					 p->top -= incy;
                      p->bottom -= incy;
 					// std::cout << _marky << std::endl;
@@ -137,6 +137,9 @@ void AppWindow::draw ()
 
 	std::cout << CD;
 
+	if (CD == 1) { for (int i = 0; i < 10; i++) { std::cout << "You Lose!!!"; } exit(1); }
+	if (CD == 2) { for (int i = 0; i < 10; i++) { std::cout << "You Win"; } exit(1); }
+
 	if (check->pass()) {
 		iterator++;
 		check = v[iterator];
@@ -149,7 +152,7 @@ void AppWindow::draw ()
    glMatrixMode( GL_MODELVIEW );
    glLoadIdentity();
      
-     glColor3d(1.0,0.0,0.0);
+ 
 
 	
      
@@ -178,7 +181,7 @@ void AppWindow::idle(){
 	auto elapsed = (curr - prev);
 
 	while (true) {
-		if (elapsed.count() >= 10000000) {
+		if (elapsed.count() >= 10000000 * 3 / 4) {
 			draw();
 			break;
 		}
@@ -200,8 +203,10 @@ void AppWindow::Reset() {
 	v.push_back(new Spike());
 	//v.push_back(new Ledge());
 	//v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
-	v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
-	v.push_back(new Spike(6.7, 6.9, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(6.0, 6.15, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(6.7, 6.85, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(7.5, 7.65, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
+	v.push_back(new Spike(8.2, 8.3, -0.5, 6.8, -0.7, 1.0, 1.0, 1.0, -0.01));
 	v.push_back(p);
 	check = v[0];
 	iterator = 0;
