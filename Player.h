@@ -15,14 +15,10 @@ public:
 
     Player()
     {
-<<<<<<< HEAD
 		
         left = -0.5; //right
         right = -0.7;//left
-=======
-        left = -0.7;
-        right = -0.5;
->>>>>>> origin/master
+
         top = -0.5;
         bottom = -0.7;
         
