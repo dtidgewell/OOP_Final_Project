@@ -1,4 +1,14 @@
-﻿  app_window.cpp
+﻿  app_main.cpp
+c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(29): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(12): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(20): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(23): warning C4305: '=': truncation from 'double' to 'float'
+  app_window.cpp
 c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
@@ -18,4 +28,5 @@ c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(206): warning C
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(207): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(208): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(209): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
   glutapp.vcxproj -> C:\Users\lyphc\Documents\GitHub\OOP_Final_Project\visualc10\obj\glutapp_Debug\glutapp.exe

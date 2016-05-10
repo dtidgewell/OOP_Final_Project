@@ -49,12 +49,13 @@ class Spike: public Object{
     }
     
     int contains(Object& p){
+			
+		if (this->red == 1 && this->green == 1 && this->blue == 1) { return 0; }
 
-
-			if(right > p.edges[0]->x && left < p.edges[0]->x && bottom < p.edges[0]->y && top > p.edges[0]->y
-			|| right > p.edges[1]->x && left < p.edges[1]->x && bottom < p.edges[1]->y && top > p.edges[1]->y
-			|| right > p.edges[2]->x && left < p.edges[2]->x && bottom < p.edges[2]->y && top > p.edges[2]->y
-			|| right > p.edges[3]->x && left < p.edges[3]->x && bottom < p.edges[3]->y && top > p.edges[3]->y)
+			if(right >= p.edges[0]->x && left <= p.edges[0]->x && bottom <= p.edges[0]->y && top >= p.edges[0]->y
+			|| right >= p.edges[1]->x && left <= p.edges[1]->x && bottom <= p.edges[1]->y && top >= p.edges[1]->y
+			|| right >= p.edges[2]->x && left <= p.edges[2]->x && bottom <= p.edges[2]->y && top >= p.edges[2]->y
+			|| right >= p.edges[3]->x && left <= p.edges[3]->x && bottom <= p.edges[3]->y && top >= p.edges[3]->y)
 		{
 			return 1;
 		}

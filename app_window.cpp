@@ -135,7 +135,7 @@ void AppWindow::draw ()
 
 	CD = check->contains(*p);
 
-	std::cout << CD;
+	//std::cout << CD;
 
 	if (CD == 1) { for (int i = 0; i < 10; i++) { std::cout << "You Lose!!!"; } exit(1); }
 	if (CD == 2) { for (int i = 0; i < 10; i++) { std::cout << "You Win"; } exit(1); }
@@ -206,7 +206,7 @@ void AppWindow::Reset() {
 	v.push_back(new Spike(6.0, 6.15, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(new Spike(6.7, 6.85, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(new Spike(7.5, 7.65, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
-	v.push_back(new Spike(8.2, 8.3, -0.5, 6.8, -0.7, 1.0, 1.0, 1.0, -0.01));
+	v.push_back(new Spike(8.2, 8.3, 1.5, 6.8, -0.7, 1.0, 1.0, 1.0, -0.01));
 	v.push_back(p);
 	check = v[0];
 	iterator = 0;
