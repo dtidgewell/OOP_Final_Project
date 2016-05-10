@@ -15,8 +15,8 @@ public:
 
     Player()
     {
-        left = -0.5;
-        right = -0.7;
+        left = -0.7;
+        right = -0.5;
         top = -0.5;
         bottom = -0.7;
         
