@@ -15,8 +15,9 @@ public:
 
     Player()
     {
-        left = -0.5;
-        right = -0.7;
+		
+        left = -0.5; //right
+        right = -0.7;//left
         top = -0.5;
         bottom = -0.7;
         
@@ -51,6 +52,8 @@ public:
 
 
     }
+
+	bool pass() { return false; }
     
 	int contains(Object& p)
     {

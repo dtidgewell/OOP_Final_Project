@@ -1,4 +1,4 @@
-﻿  app_main.cpp
+﻿  app_window.cpp
 c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
@@ -8,28 +8,14 @@ c:\users\lyphc\documents\github\oop_final_project\spike.h(52): warning C4018: '<
 c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\ledge.h(12): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\ledge.h(17): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(19): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(21): warning C4305: '=': truncation from 'double' to 'float'
-  app_window.cpp
-c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(28): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(51): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\spike.h(52): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(12): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(17): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(19): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(21): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(20): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(68): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(20): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(22): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(21): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(69): warning C4305: 'initializing': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(70): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(160): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(189): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(196): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(197): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(198): warning C4305: 'argument': truncation from 'double' to 'float'
-  Generating Code...
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(71): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(166): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(195): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(203): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(204): warning C4305: 'argument': truncation from 'double' to 'float'
   glutapp.vcxproj -> C:\Users\lyphc\Documents\GitHub\OOP_Final_Project\visualc10\obj\glutapp_Debug\glutapp.exe

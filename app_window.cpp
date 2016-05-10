@@ -12,6 +12,7 @@ Rect full(-1.0, 1, 1, 1);
 Player* p = new Player();
 Object * check;
 int CD;
+int iterator;
 
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )
@@ -136,6 +137,11 @@ void AppWindow::draw ()
 
 	std::cout << CD;
 
+	if (check->pass()) {
+		iterator++;
+		check = v[iterator];
+	}
+
    // Clear the rendering window
    glClear ( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -192,10 +198,11 @@ void AppWindow::Reset() {
 	}
 
 	v.push_back(new Spike());
-	v.push_back(new Ledge());
-	v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
+	//v.push_back(new Ledge());
+	//v.push_back(new Ledge(5.0, 5.3, -0.5, -0.7, 0.0, 1.0, 0.0, -0.01));
 	v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(new Spike(6.7, 6.9, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(p);
 	check = v[0];
+	iterator = 0;
 }

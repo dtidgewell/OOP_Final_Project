@@ -17,6 +17,8 @@ class Object{
     
     virtual void draw() = 0;
 
+	virtual bool pass() = 0;
+
     
 };
 

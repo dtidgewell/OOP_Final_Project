@@ -39,7 +39,7 @@ class Ledge : public Object{
 				return 0;
 		} 
 	
-
+		bool pass() { return false; }
 		
 		void draw()
 		{
