@@ -10,6 +10,8 @@ typedef std::chrono::high_resolution_clock Clock;
 
 Rect full(-1.0, 1, 1, 1);
 Player* p = new Player();
+Object * check;
+int CD;
 
 AppWindow::AppWindow ( const char* label, int x, int y, int w, int h )
           :GlutWindow ( label, x, y, w, h )
@@ -65,7 +67,7 @@ void AppWindow::handle ( const Event& e )
    //const float incx = 0.002;// *full.width;
    const float incx = 0.02;// *full.width;
    const float incy = 0.03;// *full.height;
-     const float JUMP_HEIGHT = 0.6;
+     const float JUMP_HEIGHT = 0.8;
      if ( e.type==SpecialKey ){
        float currentPosition = p->top;
     switch ( e.key )
@@ -129,6 +131,11 @@ void AppWindow::resize ( int w, int h )
 // here we will redraw the scene according to the current state of the application.
 void AppWindow::draw ()
  {
+
+	CD = check->contains(*p);
+
+	std::cout << CD;
+
    // Clear the rendering window
    glClear ( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -190,4 +197,5 @@ void AppWindow::Reset() {
 	v.push_back(new Spike(6.0, 6.2, -0.5, 6.1, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(new Spike(6.7, 6.9, -0.5, 6.8, -0.7, 0.0, 0.0, 1.0, -0.01));
 	v.push_back(p);
+	check = v[0];
 }

@@ -1,125 +1,35 @@
 ﻿  app_main.cpp
-c:\users\lyphc\documents\github\oop_final_project\player.h(1): error C2504: 'Object': base class undefined
-c:\users\lyphc\documents\github\oop_final_project\player.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(12): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(14): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(15): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(16): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(17): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(19): error C2065: 'red': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(20): error C2065: 'green': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(21): error C2065: 'blue': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(22): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(23): error C2065: 'dy': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(32): error C2065: 'red': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(33): error C2065: 'green': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(34): error C2065: 'blue': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(35): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(37): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(38): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(39): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(40): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(51): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(52): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(1): error C2011: 'Player': 'class' type redefinition
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(11): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(13): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(14): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(23): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(44): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2228: left of '.edges' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2228: left of '.size' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.edges' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.x' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.y' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(8): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(28): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(51): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\spike.h(52): warning C4018: '<': signed/unsigned mismatch
 c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(15): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(12): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(19): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(21): warning C4305: '=': truncation from 'double' to 'float'
   app_window.cpp
-c:\users\lyphc\documents\github\oop_final_project\player.h(1): error C2504: 'Object': base class undefined
-c:\users\lyphc\documents\github\oop_final_project\player.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(12): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\player.h(14): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(15): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(16): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(17): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(19): error C2065: 'red': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(20): error C2065: 'green': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(21): error C2065: 'blue': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(22): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(23): error C2065: 'dy': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(32): error C2065: 'red': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(33): error C2065: 'green': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(34): error C2065: 'blue': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(35): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(37): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(38): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(39): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(40): error C2065: 'edges': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(51): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(52): error C2065: 'dx': undeclared identifier
-c:\users\lyphc\documents\github\oop_final_project\player.h(1): error C2011: 'Player': 'class' type redefinition
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(11): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(13): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(14): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(23): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(44): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2228: left of '.edges' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(45): error C2228: left of '.size' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.edges' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.x' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\spike.h(46): error C2228: left of '.y' must have class/struct/union
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(8): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(15): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(18): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(28): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\spike.h(51): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\spike.h(52): warning C4018: '<': signed/unsigned mismatch
 c:\users\lyphc\documents\github\oop_final_project\ledge.h(10): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\ledge.h(15): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(12): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(12): error C2227: left of '->{ctor}' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(18): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(66): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(67): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(12): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\ledge.h(17): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(19): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\player.h(21): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(20): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(68): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(70): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(70): error C2227: left of '->top' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(79): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(79): error C2227: left of '->top' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(89): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(89): error C2227: left of '->top' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(90): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(90): error C2227: left of '->bottom' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(101): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(101): error C2227: left of '->top' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(107): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(107): error C2227: left of '->top' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(108): error C2027: use of undefined type 'Player'
-  c:\users\lyphc\documents\github\oop_final_project\player.h(1): note: see declaration of 'Player'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(108): error C2227: left of '->bottom' must point to class/struct/union/generic type
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(153): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(182): warning C4018: '<': signed/unsigned mismatch
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(189): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(190): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(191): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(192): error C2664: 'void std::vector<Object *,std::allocator<_Ty>>::push_back(Object *const &)': cannot convert argument 1 from 'Player *' to 'Object *&&'
-          with
-          [
-              _Ty=Object *
-          ]
-  c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(192): note: Reason: cannot convert from 'Player *' to 'Object *'
-  c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(192): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(69): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(70): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(160): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(189): warning C4018: '<': signed/unsigned mismatch
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(196): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(197): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\lyphc\documents\github\oop_final_project\app_window.cpp(198): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
+  glutapp.vcxproj -> C:\Users\lyphc\Documents\GitHub\OOP_Final_Project\visualc10\obj\glutapp_Debug\glutapp.exe

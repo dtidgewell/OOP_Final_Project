@@ -46,18 +46,27 @@ class Spike: public Object{
         dx = d;
     }
     
-    bool contains(Object& p){
+    int contains(Object& p){
+		float max = 0;
 		for (int i = 0; i < edges.size(); i++) {
 			for (int j = 0; j < p.edges.size(); j++) {
-				float distance = sqrt(pow((edges[i]->x - p.edges[j]->x),2) - pow((edges[i]->y - p.edges[j]->y),2));
-				if (distance < .2) { return true; }
+				float distance = sqrt((pow((edges[i]->x - p.edges[j]->x),2) + pow((edges[i]->y - p.edges[j]->y),2)));
+				//std::cout << distance << " ";
+				if (distance > max) { max = distance; }
 			}
+			//std::cout << max << " ";
+			if (max < .3) { return 1; }
+			max = 0;
 		}
-		return false;
+		return 0;
     }
     
-    
 	void draw() {
+
+		edges[0] = (new Vec(left, bottom));
+		edges[1] = (new Vec(right, bottom));
+		edges[2] = (new Vec(top, middle));
+
 		left += dx;
 		middle += dx;
 		right += dx;

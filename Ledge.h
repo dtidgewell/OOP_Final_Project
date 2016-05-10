@@ -29,15 +29,17 @@ class Ledge : public Object{
 			blue = bl;
 			dx = d;
 		}
+		
+		int contains(Object& p) {
+			/*
+			Player temp = (Player*)p;
+			if(left < p.x && top > p.y){return FATAL_COLLISION;}
+			if (left < p.x && right > p.x && top > p.y) { return LAND_COLLISION; }
+			*/
+				return 0;
+		} 
+	
 
-		bool contains(Object& p) {
-           /* if(left < p.x && top > p.y){return true;}
-            return false;
-		}
-        bool land(Vec& v){
-            if(left < p.x && right > p.x && top > p.y){return true;}*/
-            return false;
-        }
 		
 		void draw()
 		{

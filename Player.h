@@ -9,7 +9,7 @@ class Player: public Object{
 public:
     
     float left, right, top, bottom;
-    std::vector<Vec*> edges;
+   // std::vector<Vec*> edges;
     
 	//bottom Left, left top,  right top,  right bottom
 
@@ -49,16 +49,22 @@ public:
 		edges[2] = new Vec(right, top);
 		edges[3] = new Vec(right, bottom);
 
+
     }
     
-    bool contains(Object& p)
+	int contains(Object& p)
     {
         std::cout << "ERROR:Calling contains() from Player" << std::endl;
-        return false;
+        return 0;
     }
     
     void draw()
     {
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec(left, top);
+		edges[2] = new Vec(right, top);
+		edges[3] = new Vec(right, bottom);
+
         left += dx;
         right += dx;
         //top += dx;
