@@ -1,3 +1,5 @@
+//#include "Player.h"
+#include "Object.h"
 
 class Ledge : public Object{
 	public:
@@ -28,12 +30,12 @@ class Ledge : public Object{
 			dx = d;
 		}
 
-		bool contains(Player& p) {
-         /*   if(left < v.x && top > v.y){return true;}
+		bool contains(Object& p) {
+           /* if(left < p.x && top > p.y){return true;}
             return false;
 		}
         bool land(Vec& v){
-            if(left < v.x && right > v.x && top > v.y){return true;} */
+            if(left < p.x && right > p.x && top > p.y){return true;}*/
             return false;
         }
 		

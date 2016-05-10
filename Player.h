@@ -1,7 +1,16 @@
+#include <vector>
+#include "Object.h"
+#include "Vec.h"
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
 class Player: public Object{
 public:
     
     float left, right, top, bottom;
+    std::vector<Vec*> edges;
+    
 	//bottom Left, left top,  right top,  right bottom
 
     Player()
@@ -10,11 +19,12 @@ public:
         right = -0.7;
         top = -0.5;
         bottom = -0.7;
-
-		edges[0] = Vec (left, bottom);
-		edges[1] = Vec (left, top);
-		edges[2] = Vec (right, top);
-		edges[3] = Vec (right, bottom);
+        
+        for(int i = 0; i < 4; i++){edges.push_back(new Vec(0,0));}
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec (left, top);
+		edges[2] = new Vec (right, top);
+		edges[3] = new Vec (right, bottom);
         
         red = 1.0;
         green = 0.0;
@@ -34,15 +44,16 @@ public:
         blue = bl;
         dx = d;
 
-		edges[0] = Vec(left, bottom);
-		edges[1] = Vec(left, top);
-		edges[2] = Vec(right, top);
-		edges[3] = Vec(right, bottom);
+		edges[0] = new Vec(left, bottom);
+		edges[1] = new Vec(left, top);
+		edges[2] = new Vec(right, top);
+		edges[3] = new Vec(right, bottom);
 
     }
     
-    bool contains(Player& p)
+    bool contains(Object& p)
     {
+        std::cout << "ERROR:Calling contains() from Player" << std::endl;
         return false;
     }
     
@@ -64,3 +75,5 @@ public:
     }
     
 };
+
+#endif

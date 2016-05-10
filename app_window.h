@@ -4,7 +4,7 @@
 #define APP_WINDOW_H
 
 # include "glut_window.h"
-# include "Object.h"
+#include "Object.h"
 #include "Spike.h"
 #include "Ledge.h"
 #include "Player.h"

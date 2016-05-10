@@ -1,3 +1,6 @@
+#ifndef VEC_H
+#define VEC_H
+
 class Vec{
     
 public:
@@ -23,6 +26,11 @@ public:
     }
 
 };
+
+#endif
+
+#ifndef RECT_H
+#define RECT_H
 
 class Rect
 {
@@ -55,3 +63,5 @@ Rect(float UX, float UY, float X, float Y) {
 }
 
 };
+
+#endif
