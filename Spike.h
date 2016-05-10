@@ -47,6 +47,7 @@ class Spike: public Object{
     }
     
     int contains(Object& p){
+<<<<<<< HEAD
 
 		for (int i = 0; i < edges.size(); i++) {
 			for (int j = 0; j < p.edges.size(); j++) {
@@ -56,6 +57,12 @@ class Spike: public Object{
 		
 		}
 		return 0;
+=======
+        for(int i = 0; i < p.edges.size(); i++){
+            if(p.edges[i]->y > bottom && p.edges[i]->y < top && p.edges[i]->x > (2*p.edges[i]->x)-left && p.edges[i]->x < (p.edges[i]->x * -2) + right){return 1;}
+        }
+        return 0;
+>>>>>>> origin/master
     }
 
 	bool pass() { 
